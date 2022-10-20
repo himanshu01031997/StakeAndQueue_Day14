@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Stake Problem");
-            Console.WriteLine("1.Push the Element In a Stack\n2.Display top element\n");
+            Console.WriteLine("1.Push the Element In a Stack\n2.Display top element\n3.PopElement\n");
             Console.WriteLine("Select Your Choice: ");
             Console.WriteLine("----------------------------------\n");
             int option = Convert.ToInt32(Console.ReadLine());
@@ -28,6 +28,17 @@
                     listStack1.Push(70);
                     listStack1.Display();
                     listStack1.Peek();
+                    break;
+                case 3:
+                    Console.WriteLine("----------------------------------\n");
+                    LinkStake listStack3 = new LinkStake();
+                    listStack3.Push(56);
+                    listStack3.Push(30);
+                    listStack3.Push(70);
+                    listStack3.Display();
+                    listStack3.Pop();
+                    listStack3.Display();
+
                     break;
 
 

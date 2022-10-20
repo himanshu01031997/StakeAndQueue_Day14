@@ -38,6 +38,16 @@ namespace StakeAndQueue
             }
             Console.WriteLine("{0} is in the top of the Stack", this.top.data);
         }
+        internal void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty,Deletion is not possible");
+                return;
+            }
+            Console.WriteLine("Value Popped is {0}", this.top.data);
+            this.top = this.top.next;
+        }
         internal void Display()
         {
             Node temp = this.top;
