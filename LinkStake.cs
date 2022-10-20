@@ -29,7 +29,16 @@ namespace StakeAndQueue
             this.top = node;
             Console.WriteLine("{0} pushed to stack", value);
         }
-        internal void Dispaly()
+        internal void Peek()                               // Top Most Element Of Stack 
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            Console.WriteLine("{0} is in the top of the Stack", this.top.data);
+        }
+        internal void Display()
         {
             Node temp = this.top;
             while (temp != null)
