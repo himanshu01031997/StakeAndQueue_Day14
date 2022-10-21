@@ -48,6 +48,24 @@ namespace StakeAndQueue
             Console.WriteLine("Value Popped is {0}", this.top.data);
             this.top = this.top.next;
         }
+        public void Enqueue(int data)                       // Insert Element in Queue
+        {
+            Node node = new Node(data);
+            if (this.top == null)
+            {
+                this.top = node;
+            }
+            else
+            {
+                Node temp = top;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} inserted into Queue", node.data);
+        }
         internal void Display()
         {
             Node temp = this.top;
